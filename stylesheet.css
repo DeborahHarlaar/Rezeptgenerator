@@ -1,0 +1,304 @@
+body{
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+/*Photo by Brooke Lark on Unsplash*/
+.bgimage{
+	background: url('brooke-lark-254998-unsplash.jpg');
+	background-position: center;
+	background-size: cover;
+	object-fit: contain;
+	max-height: calc(100% - 48px);
+	min-height: 100vh;
+	max-width: 100%;
+	position: relative;
+}
+
+.container{
+	width: 40%;
+	padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container input{
+	background-color: #124559;
+	border: none;
+	color: #efefef;
+	display: block;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-decoration: none;
+	width: 30%;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.container p{
+	background-color:  rgb(239, 239, 239, 0.77);
+}
+
+.container a{
+	background-color:  #124559;
+	color: #efefef;
+	text-decoration: none;
+	padding-left: 2.5px;
+	padding-right: 2.5px;
+}
+
+.container a:hover{
+	background-color: #598392;
+}
+
+h1{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#recepiename{
+	text-align: center;
+	border-bottom: 1px solid #124559;
+}
+
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+#ingredients{
+	width: 34%;
+	border-right: 1px solid #124559;
+	background-color: rgb(239, 239, 239, 0.77);
+	padding-left: 2.5px;
+	padding-top: 2.5px;
+}
+
+#recepie{
+	width: 66%;
+	background-color: rgb(239, 239, 239, 0.77);
+	padding-left: 2.5px;
+	padding-top: 2.5px;
+}
+
+.message{
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	text-align: center;
+	background-color: #aec3b0;
+}
+
+select{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+textarea{
+	width: 85%;
+	resize: none;
+	height: 250px;
+	outline: none;
+	border: 1px solid #124559;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.recepiename{
+	height: 25px;
+}
+
+/*Navbar*/
+nav{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #124559;
+	min-height: 48px;
+}
+
+nav a{
+	float: left;
+}
+
+nav a{
+	display: block;
+	color: #efefef;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+nav a:hover{
+	background-color: #598392;
+}
+/*Navbar end*/
+
+/*Recipe list*/
+ul{
+	margin-top: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.list{
+	background-color: rgb(239, 239, 239, 0.77);
+	width: 15%;
+	padding-top: 12.5px;
+	height: 100vh;
+	float: left;
+}
+
+.list a{
+	display: block;
+	color:  #124559;
+	padding-top: 2.5px;
+	padding-bottom: 2.5px;
+	text-decoration: none;
+}
+
+.list a:hover{
+	background-color: #598392;
+}
+
+#barsListResponsive{
+	z-index: 3;
+	position: absolute;
+	top: 18px;
+	margin-left: 90%;
+	color: #124559;
+}
+/*Recipe list end*/
+
+@media(min-width: 701px){
+	.fa-bars{
+		display: none !important;
+	}
+}
+
+@media (max-width: 700px){
+	.navigation a {
+		display: none;
+	}
+	.fa-bars {
+		z-index: 1;
+		position: absolute;
+		top: 18px;
+		margin-left: 90%;
+		color: #efefef;
+	}
+
+	.navigation.responsive a{
+		float: none;
+		display: block;
+		text-align: left;
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+}
+
+@media(max-width: 1440px){
+	.container{
+		width: 60%;
+	}
+}
+
+@media(max-width: 1024px){
+	.container{
+		width: 80%;
+	}
+
+	.list{
+		width: 100%;
+		height: 48px;
+		position: relative;
+	}
+
+	.list.responsive{
+		height: auto;
+		background-color: rgb(239, 239, 239, 1);
+		z-index: 10;
+	}
+
+	.list a{
+		display: none;
+	}
+	.list.responsive a{
+		float: none;
+		display: block;
+	}
+	#barsListResponsive{
+		display: block !important;
+	}
+}
+
+@media(max-width: 768px){
+	#ingredients{
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid #124559;
+		padding-bottom: 10px;
+	}
+
+	#recepie{
+		width: 100%;
+		padding-top: 10px;
+	}
+
+	#recepiename{
+		border-bottom: none;
+	}
+
+	.flex{
+		flex-wrap: wrap;
+	}
+
+	.container textarea{
+		width: 100%;
+	}
+
+	textarea{
+		width: 100%;
+	}
+
+	.message{
+		width: 100%;
+	}
+
+	.container input{
+		width: 60% !important;
+	}
+
+	.post{
+		margin-top: 0;
+	}
+}
+
+@media(max-width: 425px){
+	.container input{
+		width: 70%;
+	}
+}
+
+@media(max-width: 375px){
+	.container{
+		width: 90%;
+	}
+
+	.post{
+		margin-top: 0;
+	}
+}
